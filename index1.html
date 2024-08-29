@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* baseball.jpg 이미지를 원하는 크기에 맞게 조절 */
+    .img-part img {
+      max-width: 100%; /* 이미지의 최대 너비를 부모 요소의 크기에 맞게 조절 */
+      max-height: 100%; /* 이미지의 최대 높이를 부모 요소의 크기에 맞게 조절 */
+      display: block; /* 이미지를 블록 요소로 표시하여 다른 요소와 수직으로 정렬 */
+      margin: auto; /* 이미지를 수평으로 가운데 정렬 */
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <title>MHDP Full Calendar</title>
+</head>
+<body>
+
+  <article class="container">
+    <div class = "v250 text = center">
+        <h2>Ticket Waypoint</h2>
+
+    </div>
+    <div class = "row img-part">
+        <div class = "col-3">
+            <figure>
+                <div class = "circle">
+                    <img src = "baseball.jpg" alt = "사진1">
+                </div>
+                <figcaption>
+                    <h3>야구</h3>
+                    <!-- <p>여기는 사진에 대한 설명</p> -->
+                </figcaption>
+            </figure>
+        </div>
+        <div class = "col-3">
+            <figure>
+                <div class = "circle">
+                    <img src = "soccer.jpg" alt = "사진2">
+                </div>
+                <figcaption>
+                    <h3>축구</h3>
+                    <!-- <p>여기는 사진에 대한 설명</p> -->
+                </figcaption>
+            </figure>
+        </div>
+        <div class = "col-3">
+            <figure>
+                <div class = "circle">
+                    <img src = "basketball.jpg" alt = "사진3">
+                </div>
+                <figcaption>
+                    <h3>농구</h3>
+                    <!-- <p>여기는 사진에 대한 설명</p> -->
+                </figcaption>
+            </figure>
+        </div>
+
+        
+    </div>
+  </article>
+  <div class="calendar">
+    <div class="header">
+      <div class="year-month"></div>
+      <div class="nav">
+        <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+        <button class="nav-btn go-today" onclick="goToday()">Today</button>
+        <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+      </div>
+    </div>
+    <div class="main">
+      <div class="days">
+        <div class="day">일</div>
+        <div class="day">월</div>
+        <div class="day">화</div>
+        <div class="day">수</div>
+        <div class="day">목</div>
+        <div class="day">금</div>
+        <div class="day">토</div>
+      </div>
+      <div class="dates"></div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

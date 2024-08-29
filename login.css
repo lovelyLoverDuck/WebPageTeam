@@ -1,0 +1,53 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  .main{
+    margin: 0 auto;
+    padding: 40px;
+    width: 450px;
+  }
+  body{
+    background-color: #fff;
+  }
+  .logo{
+    margin: 10px auto;
+    margin-top: 10px;
+    margin-bottom: 90px;
+    border: 1px;
+    text-align: center;
+    font-size: 40px;
+  }
+  .feild{
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 17px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f1f1f1;
+  }
+  .Login{
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  .make{
+    text-align: right;
+    font-size: 13px;
+  }
+  ul{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    color: gray;
+  }
+  

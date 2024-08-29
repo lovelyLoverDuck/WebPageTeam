@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ticket Waypoint</title>
+    <script>
+      function query(){
+        let ret = confirm("관리자 로그인으로 이동하시겠습니까?");
+        if(ret == true)
+          location.href = 'login.html';
+      }
+
+    </script>
+    <style>
+      /* 배경 설정*/
+      body {
+        background-image: url("back.jpg");
+        background-size: auto;
+        background-position: center;
+      }
+
+      /* Ticket Waypoint 글자 특성 */
+      h1 {
+        text-align: left;
+        font-size: 65px;
+        color: #e31212aa;
+        text-shadow: 5px 5px 10px rgb(255, 180, 180);
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+
+      /* 버튼 배치 */
+      .button-container {
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      /* 각각의 사진 버튼 */
+      .expand-button {
+        position: relative;
+        overflow: hidden;
+        width: 270px;
+        height: 100px;
+        margin: 15px 34px;
+        padding: 5px;
+        color: black;
+        border-radius: 15px;
+        text-align: center;
+        font-weight: bold;
+        background-size: cover;
+        background-position: center;
+        transition: height 1s ease-out;
+      }
+
+      /* 버튼 확장 길이 조절*/
+      .expand-button:hover {
+        height: 400px;
+      }
+
+      /* 사진 버튼 확장 전 글꼴 설정*/
+      .expand-button::after {
+        content: attr(data-content);
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: rgb(255, 255, 255);
+        text-align: left;
+        border-radius: 35px;
+        transition: transform 0.5s ease, background-color 0.5s ease;
+        transform: translateY(100%);
+      }
+      /* 사진 버튼 확장 후 글꼴 설정*/
+      .expand-button:hover::after {
+        position: absolute;
+        width: 92%;
+        padding: 10px;
+        text-align: center;
+        transform: translateY(0);
+        background-color: rgba(255, 255, 255, 0.9);
+        color: rgba(0, 0, 0, 0.9);
+      }
+
+      /* 관리자 로그인 */
+      #button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #666565;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ticket Waypoint</h1>
+    <div class="button-container">
+      <button
+        class="expand-button"
+        style="background-image: url('Drama.jpg')"
+        data-content="연극 / Drama"
+        , onclick ="location.href = 'index1.html'"
+      ></button>
+      <button
+        class="expand-button"
+        style="background-image: url('Concert.jpg')"
+        data-content="콘서트 / Concert"
+        , onclick ="location.href = 'index1.html'"
+      ></button>
+      <button
+        class="expand-button"
+        style="background-image: url('Musical.jpg')"
+        data-content="뮤지컬 / Musical"
+        , onclick ="location.href = 'index1.html'"
+      ></button>
+      <button
+        class="expand-button"
+        style="background-image: url('Sport.jpg')"
+        data-content="스포츠 / Sport"
+        , onclick ="location.href = 'index1.html'"
+      ></button>
+    </div>
+
+    <button id="button", onclick ="query()">관리자 로그인</button>
+  </body>
+</html>
